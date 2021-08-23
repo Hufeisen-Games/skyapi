@@ -5,12 +5,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import main.java.com.github.HufeisenGames.SkyAPI.inventory.SkyInventoryAPI;
 import main.java.com.github.HufeisenGames.SkyAPI.listener.InventoryListener;
-import main.java.com.github.HufeisenGames.SkyAPI.particle.SkyParticleAPI;
 
 public class SkyAPI {
 	
 	public SkyInventoryAPI skyInventoryAPI;
-	public SkyParticleAPI skyParticleAPI;
+	//public SkyParticleAPI skyParticleAPI;
 	public static SkyAPI skyAPI;
 	
 	public static enum API{
@@ -29,11 +28,11 @@ public class SkyAPI {
 	    		} else {
 	    			Bukkit.getLogger().warning("You are trying to activate the InventoryAPI from SkyAPI both!");
 	    		}
-	    		if(skyParticleAPI == null) {
-	    			skyParticleAPI = new SkyParticleAPI();
-	    		} else {
-	    			Bukkit.getLogger().warning("You are trying to activate the InventoryAPI from SkyAPI both!");
-	    		}
+	    		//if(skyParticleAPI == null) {
+	    			//skyParticleAPI = new SkyParticleAPI();
+	    		//} else {
+	    			//Bukkit.getLogger().warning("You are trying to activate the InventoryAPI from SkyAPI both!");
+	    		//}
 	    	}
 	    }
 	}
