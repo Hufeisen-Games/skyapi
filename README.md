@@ -1,6 +1,6 @@
 # SkyAPI
 
-SkyAPI is an ligthwight open source api. At the moment there is only one API module developed. For documentation you can read the **wiki entry** or use the java docs.
+SkyAPI is an ligthwight open source api. At the moment there is only one API module developed. For documentation you can read the [wiki entry](https://github.com/Hufeisen-Games/skyapi/wiki "wiki entry") or use the java docs.
 
 ## Functions/Modules
 At the moment there is only the simple to use Inventory API implemented.
@@ -33,7 +33,7 @@ You have to replace APIMODULES with the modules you want to activate. Currently 
 ```java
 new SkyAPI(this, API.Inventory);
 ```
-You are now able to create a new SkyInventory! For more documentation you can read the **wiki**.
+You are now able to create a new SkyInventory! For more documentation you can read the [wiki](https://github.com/Hufeisen-Games/skyapi/wiki "wiki").
 ## Roadmap
 I am already working on an Scoreboard API. Feel free to contribute to the project an report bugs in the issue section. Here is a short list of planned modules:
 - Scoreboard
