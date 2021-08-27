@@ -8,7 +8,7 @@ At the moment there is only the simple to use Inventory API implemented.
 There is actually one supported way to implement this API to your Plugin.
 ### Maven
 Repository:
-``````xml
+```xml
 <repository>
 	<id>hufeisen-games-repo</id>
 	<url>http://repo.hufeisen-games.de/maven2</url>
