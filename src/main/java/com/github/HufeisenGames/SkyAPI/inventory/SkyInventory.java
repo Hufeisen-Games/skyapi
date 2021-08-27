@@ -59,7 +59,7 @@ public class SkyInventory{
 	 */
 	public SkyInventory(String name, int slots) throws APINotActiveException {
 		
-		if(skyAPI.skyInventoryAPI == null) {
+		if(skyAPI.getSkyInventoryAPI() == null) {
 			
 			throw new APINotActiveException("You are trying to acces the InventoryAPI from SkyAPI while it is disabled!");
 			
@@ -75,7 +75,7 @@ public class SkyInventory{
 	
 			filler.setItemMeta(fillerMeta);
 			
-			skyAPI.skyInventoryAPI.inventories.add(this);
+			skyAPI.getSkyInventoryAPI().inventories.add(this);
 			
 		}
 
@@ -94,7 +94,7 @@ public class SkyInventory{
 	 */
 	public SkyInventory(String name, int slots, ItemStack filler) throws APINotActiveException {
 		
-		if(skyAPI.skyInventoryAPI == null) {
+		if(skyAPI.getSkyInventoryAPI() == null) {
 			
 			throw new APINotActiveException("You are trying to acces the InventoryAPI from SkyAPI while it is disabled!");
 			
@@ -103,7 +103,7 @@ public class SkyInventory{
 			this.name = name;
 			this.slots = slots;
 			this.filler = filler;
-			skyAPI.skyInventoryAPI.inventories.add(this);
+			skyAPI.getSkyInventoryAPI().inventories.add(this);
 			
 		}
 	}

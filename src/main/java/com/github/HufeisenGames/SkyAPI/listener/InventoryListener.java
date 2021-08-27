@@ -8,16 +8,25 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import main.java.com.github.HufeisenGames.SkyAPI.SkyAPI;
 import main.java.com.github.HufeisenGames.SkyAPI.inventory.SkyInventory;
 
+/**
+ * Listener class used for inventory checks for the InventoryAPI
+ * 
+ * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @version     1.2
+ * @since       1.2
+ * 
+ */
+
 public class InventoryListener implements Listener{
 	
-	SkyAPI skyAPI = SkyAPI.getSkyAPI();
+	private SkyAPI skyAPI = SkyAPI.getSkyAPI();
 	
 	@EventHandler
-	public void onInventoryClick(InventoryClickEvent event) {
+	private void onInventoryClick(InventoryClickEvent event) {
 		
-        if(skyAPI.skyInventoryAPI != null) {
+        if(skyAPI.getSkyInventoryAPI() != null) {
         	
-        	for(SkyInventory inventory : skyAPI.skyInventoryAPI.inventories) {
+        	for(SkyInventory inventory : skyAPI.getSkyInventoryAPI().inventories) {
         		
         		inventory.onInventoryClick(event);
         		
@@ -27,11 +36,11 @@ public class InventoryListener implements Listener{
 	}
 	
 	@EventHandler
-    public void onInventoryClose(InventoryCloseEvent event) {
+    private void onInventoryClose(InventoryCloseEvent event) {
 		
-        if(skyAPI.skyInventoryAPI != null) {
+        if(skyAPI.getSkyInventoryAPI() != null) {
         	
-        	for(SkyInventory inventory : skyAPI.skyInventoryAPI.inventories) {
+        	for(SkyInventory inventory : skyAPI.getSkyInventoryAPI().inventories) {
         		
         		inventory.onInventoryClose(event);
         		
