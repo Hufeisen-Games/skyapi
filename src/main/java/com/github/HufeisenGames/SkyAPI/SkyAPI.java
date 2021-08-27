@@ -5,16 +5,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import main.java.com.github.HufeisenGames.SkyAPI.inventory.SkyInventoryAPI;
 import main.java.com.github.HufeisenGames.SkyAPI.listener.InventoryListener;
+import main.java.com.github.HufeisenGames.SkyAPI.scoreboard.SkyBoardAPI;
 
 public class SkyAPI {
 	
 	public SkyInventoryAPI skyInventoryAPI;
-	//public SkyParticleAPI skyParticleAPI;
+	public SkyBoardAPI skyBoardAPI;
 	public static SkyAPI skyAPI;
 	
 	public static enum API{
 		Inventory,
-		Particle,
+		ScoreBoard,
 		None
 	}
 	
@@ -28,11 +29,11 @@ public class SkyAPI {
 	    		} else {
 	    			Bukkit.getLogger().warning("You are trying to activate the InventoryAPI from SkyAPI both!");
 	    		}
-	    		//if(skyParticleAPI == null) {
-	    			//skyParticleAPI = new SkyParticleAPI();
-	    		//} else {
-	    			//Bukkit.getLogger().warning("You are trying to activate the InventoryAPI from SkyAPI both!");
-	    		//}
+	    		if(skyBoardAPI == null) {
+	    			skyBoardAPI = new SkyBoardAPI();
+	    		} else {
+	    			Bukkit.getLogger().warning("You are trying to activate the ScoreBoardAPI from SkyAPI both!");
+	    		}
 	    	}
 	    }
 	}
