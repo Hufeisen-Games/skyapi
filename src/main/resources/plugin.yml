@@ -1,10 +1,6 @@
-name: InventoryAPI
-prefix: InventoryAPI
-version: 1.0
+name: SkyAPI
+prefix: SkyAPI
+version: 1.2
 main: main.java.com.github.HufeisenGames.SkyAPI.SkyAPIPlugin
 api-version: 1.13
-depend: []
 authors: [Hufeisen]
-commands:
-   testgui:
-      description: Mit diesem Befehl ist es moeglich die Funktionen dieser GUI API zu testen.
