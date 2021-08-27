@@ -73,7 +73,7 @@ public class SkyInventory{
 	
 			fillerMeta.setDisplayName(" ");
 	
-			filler.addItemMeta(fillerMeta);
+			filler.setItemMeta(fillerMeta);
 			
 			skyAPI.skyInventoryAPI.inventories.add(this);
 			
@@ -197,7 +197,7 @@ public class SkyInventory{
 
 		itemMeta.setDisplayName(name);
 
-		item.addItemMeta(itemMeta);
+		item.setItemMeta(itemMeta);
 
 		UIItem uiitem = new UIItem(this, item, position);
 		
@@ -246,7 +246,7 @@ public class SkyInventory{
 		itemMeta.setDisplayName(name);
 		itemMeta.setLore(lore);
 
-		item.addItemMeta(itemMeta);
+		item.setItemMeta(itemMeta);
 		UIItem uiitem = new UIItem(this, item, position);
 		uiitem.inventory = this;
 		
@@ -420,14 +420,14 @@ public class SkyInventory{
 		if(filler != null) {
 			for (int slot = 0; slot < inv.getSize(); slot++) {
 	
-				inv.addItem(slot, filler);
+				inv.setItem(slot, filler);
 	
 			}
 		}
 
 		for (UIItem uiitem : items) {
 
-			inv.addItem(uiitem.position, uiitem.item);
+			inv.setItem(uiitem.position, uiitem.item);
 
 		}
 		DrawInventoryEvent invEvent = new DrawInventoryEvent(this, inv, player, slots, name);
