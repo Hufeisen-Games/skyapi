@@ -6,7 +6,7 @@
 	<artifactId>SkyAPI</artifactId>
 	<packaging>jar</packaging>
 	<name>SkyAPI</name>
-	<version>1.2.1</version>
+	<version>2.0</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>

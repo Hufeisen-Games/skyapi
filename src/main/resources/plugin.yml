@@ -4,7 +4,3 @@ version: 2.0
 main: main.java.com.github.HufeisenGames.SkyAPI.SkyAPIPlugin
 api-version: 1.13
 authors: [Hufeisen]
-
-commands:
-   test:
-      description: test

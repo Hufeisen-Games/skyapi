@@ -13,16 +13,15 @@ import main.java.com.github.HufeisenGames.SkyAPI.exceptions.APINotActiveExceptio
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 
+/**
+ * Create an simple to use, API based teleport
+ * 
+ * @author      Hufeisen hufeisen@hufeisen-games.de
+ * @version     2.0
+ * @since       2.0
+ * 
+ */
 public class SkyTeleport {
-
-	/**
-	 * Create an simple to use, API based teleport
-	 * 
-	 * @author Hufeisen hufeisen@hufeisen-games.de
-	 * @version 2.0
-	 * @since 2.0
-	 * 
-	 */
 
 	private Location targetLocation;
 	private Player p;
@@ -35,6 +34,17 @@ public class SkyTeleport {
 	private boolean hasMoved;
 	private boolean isCanceled;
 
+	/**
+	 * <p>
+	 * Create an simple to use, API based teleport
+	 * <p>
+	 *
+	 * @param  p The player to be teleported
+	 * @param  seconds The time after which teleportation takes place
+	 * @param  movementIsCanceling Does the player's movement cancel the teleport?
+	 * @throws APINotActiveException
+	 * @since 2.0
+	 */
 	public SkyTeleport(Player p, Location targetLocation, int seconds, boolean movementIsCanceling) throws APINotActiveException {
 
 		if(SkyAPI.getSkyAPI().getSkyInventoryAPI() == null) {
@@ -53,6 +63,20 @@ public class SkyTeleport {
 
 	}
 
+	/**
+	 * <p>
+	 * Create an simple to use, API based teleport
+	 * <p>
+	 *
+	 * @param  p The player to be teleported
+	 * @param  seconds The time after which teleportation takes place
+	 * @param  movementIsCanceling Does the player's movement cancel the teleport?
+	 * @param  countdownSound Sound that is played every second
+	 * @param  countdownEffect Effect that is played every second
+	 * @param  teleportSound Sound that is played during teleport
+	 * @throws APINotActiveException
+	 * @since 2.0
+	 */
 	public SkyTeleport(Player p, Location targetLocation, int seconds, boolean movementIsCanceling,
 			Sound countdownSound, Effect countdownEffect, Sound teleportSound) throws APINotActiveException {
 
@@ -74,6 +98,16 @@ public class SkyTeleport {
 		}
 	}
 
+	/**
+	 * <p>
+	 * Create an simple to use, API based teleport
+	 * <p>
+	 *
+	 * @param  p The player to be teleported
+	 * @param  seconds The time after which teleportation takes place
+	 * @throws APINotActiveException
+	 * @since 2.0
+	 */
 	public SkyTeleport(Player p, Location targetLocation, int seconds) throws APINotActiveException {
 
 		if(SkyAPI.getSkyAPI().getSkyInventoryAPI() == null) {
@@ -91,6 +125,13 @@ public class SkyTeleport {
 		}
 	}
 
+	/**
+	 * <p>
+	 * Performs the teleportation
+	 * <p>
+	 *
+	 * @since 2.0
+	 */
 	public void teleport() {
 
 		teleport((Player p, Location l, CallbackState state) -> {
@@ -98,6 +139,15 @@ public class SkyTeleport {
 
 	}
 
+	/**
+	 * <p>
+	 * Performs the teleportation
+	 * <p>
+	 *
+	 * @param  position The slot where the item will be placed. The first slot from the inventory is 0
+	 * @param  callback The callback is executed when the teleportation was performed
+	 * @since 2.0
+	 */
 	public void teleport(TeleportCallback callback) {
 
 		new BukkitRunnable() {
@@ -158,12 +208,26 @@ public class SkyTeleport {
 
 	}
 
+	/**
+	 * <p>
+	 * Cancels the teleport
+	 * <p>
+	 *
+	 * @since 2.0
+	 */
 	public void setCanceled() {
 		
 		isCanceled = true;
 		
 	}
 
+	/**
+	 * <p>
+	 * Internal method
+	 * <p>
+	 *
+	 * @since 2.0
+	 */
 	public void checkMove(Player p) {
 		
 		if(this.p.getName().equals(p.getName())) {
@@ -171,10 +235,26 @@ public class SkyTeleport {
 		}
 	}
 	
+	/**
+	 * <p>
+	 * Get the remaining time
+	 * <p>
+	 *
+	 * @return int
+	 * @since 2.0
+	 */
 	public int getSeconds() {
 		return seconds;
 	}
 
+	/**
+	 * The messages that are sent
+	 * 
+	 * @author      Hufeisen hufeisen@hufeisen-games.de
+	 * @version     2.0
+	 * @since       2.0
+	 * 
+	 */
 	public static class TeleportMessages {
 
 		public static String COOLDOWN = "Missing Message: COOLDWON", 
