@@ -11,7 +11,7 @@ import main.java.com.github.HufeisenGames.SkyAPI.inventory.SkyInventory;
 /**
  * Listener class used for inventory checks for the InventoryAPI
  * 
- * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @author      Hufeisen hufeisen@hufeisen-games.de
  * @version     1.2
  * @since       1.2
  * 

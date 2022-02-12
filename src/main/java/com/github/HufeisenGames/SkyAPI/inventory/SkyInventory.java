@@ -22,7 +22,7 @@ import main.java.com.github.HufeisenGames.SkyAPI.inventory.functions.ItemFunctio
 /**
  * Create an simple to use, API based inventory
  * 
- * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @author      Hufeisen hufeisen@hufeisen-games.de
  * @version     1.2
  * @since       1.0
  * 
@@ -54,7 +54,7 @@ public class SkyInventory{
 	 *
 	 * @param  name The display name of the inventory
 	 * @param  slots The size of the inventory
-	 * @return SkyInventory Class
+	 * @throws APINotActiveException
 	 * @since 1.0
 	 */
 	public SkyInventory(String name, int slots) throws APINotActiveException {
@@ -89,7 +89,7 @@ public class SkyInventory{
 	 * @param  name The display name of the inventory
 	 * @param  slots The size of the inventory
 	 * @param  filler The ItemStack that will be used to fill empty slots. Use {@link #nullFiller()} to create empty filler. Can also set using {@link #setFiller(ItemStack item)}
-	 * @return SkyInventory Class
+	 * @throws APINotActiveException
 	 * @since 1.0
 	 */
 	public SkyInventory(String name, int slots, ItemStack filler) throws APINotActiveException {
@@ -140,6 +140,21 @@ public class SkyInventory{
 
 		UIItem uiitem = createItem(position, item);
 
+		items.add(uiitem);
+		return uiitem;
+	}
+	
+	/**
+	 * <p>
+	 * Add an item to the inventory
+	 * <p>
+	 *
+	 * @param  position The slot where the item will be placed. The first slot from the inventory is 0
+	 * @param  uiitem The UIItem that will be used to create the item.
+	 * @return UIItem Class, please use {@link #createItem(int position, ItemStack item)} to create an UIItem for this inventory. With this function it will be automaticaly added
+	 * @since 1.0
+	 */
+	public UIItem addItem(int position, UIItem uiitem) {
 		items.add(uiitem);
 		return uiitem;
 	}
@@ -279,7 +294,7 @@ public class SkyInventory{
 	 */
 	public void changeItem(int position, UIItem item) {
 		removeItem(position);
-		addItem(position, item.item);
+		addItem(position, item);
 	}
 	
 	/**

@@ -9,7 +9,7 @@ import main.java.com.github.HufeisenGames.SkyAPI.inventory.functions.ItemFunctio
 /**
  * The UIItem object that will be used in SkyInventories
  * 
- * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @author      Hufeisen hufeisen@hufeisen-games.de
  * @version     1.2
  * @since       1.0
  * 
@@ -86,7 +86,7 @@ public class UIItem {
 		if(itemFunction != null) {
 			itemFunction.onClick(this, inventory, player, event);
 		}
-		
+
 		if(!canGet) {
 			event.setCancelled(true);
 		}

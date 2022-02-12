@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Class for activating the SkyInventoryAPI. Do not create this
  * 
- * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @author      Hufeisen hufeisen@hufeisen-games.de
  * @version     1.2
  * @since       1.2
  * 

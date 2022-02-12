@@ -9,7 +9,7 @@ import main.java.com.github.HufeisenGames.SkyAPI.inventory.events.DrawInventoryE
 /**
  * Interface used to create an inventory function.
  * 
- * @author      Hufeisen <hufeisen@hufeisen-games.de>
+ * @author      Hufeisen hufeisen@hufeisen-games.de
  * @version     1.2
  * @since       1.2
  * 

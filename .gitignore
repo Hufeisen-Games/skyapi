@@ -3,3 +3,9 @@ bin
 .project
 .classpath
 .settings
+*.html
+*.png
+element-list
+*.js
+*.css
+*.zip
